@@ -1,0 +1,64 @@
+body {
+    background: linear-gradient(180deg, rgba(113,178,128,1) 0%, rgba(19,78,94,1) 100%);
+    min-height: 100vh;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+        sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+    text-decoration: none;
+    color:rgb(0, 151, 38, 1)
+}
+
+#header-alert-info a {
+    text-decoration: underline;
+    color:rgb(255, 255, 255, 1)
+}
+
+#auth-chip {
+    border: 1px solid rgba(113,178,128,1);
+    background-color: rgba(255,255,255,1);
+}
+
+#login-badge {
+    font-family: "Roboto","Helvetica","Arial",sans-serif;
+    display: inline-block;
+    vertical-align: top;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+    border-radius: 20px;
+    background-color: #0288d1;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    padding: 7px 16px 6px;
+    margin: 0;
+    border: none;
+    color: #fff;
+    padding: 9px 21px 11px;
+    border-radius: 20px;
+    font-weight: 500;
+}
+
+#admin-login-badge {
+    font-family: "Roboto","Helvetica","Arial",sans-serif;
+    display: inline-block;
+    vertical-align: top;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+    border-radius: 20px;
+    background-color: #d10202;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    padding: 7px 16px 6px;
+    margin: 0;
+    border: none;
+    color: #fff;
+    padding: 9px 21px 11px;
+    border-radius: 20px;
+}
