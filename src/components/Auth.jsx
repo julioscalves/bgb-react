@@ -12,43 +12,6 @@ import {
 import TelegramLoginButton from 'react-telegram-login'
 import AuthAlert from "./AuthAlert"
 
-function renderRow(props) {
-    const { index, style } = props;
-  
-    return (
-      <ListItem style={style} key={index} component="div" disablePadding>
-        <ListItemButton>
-          <ListItemText 
-            primary={
-                <>
-                    <Typography variant="subtitle1">
-                        Placeholder {/* @{ listContent.users[index][1] } - { listContent.users[index][0] } */}
-                    </Typography>               
-                </>
-            }
-            secondary={
-                <>
-                    <Typography variant="subtitle2">
-                        Placeholder {/*Bloqueio até { listContent.users[index][2] } */}
-                    </Typography>   
-                    <Typography variant="subtitle2">
-                        Placeholder {/*
-                        
-                        { 
-                            listContent.users[index][3]
-                            ?   "ESTÁ banido."
-                            :   "NÃO está banido."
-                        }
-                    */}
-                    </Typography>            
-                </>
-            }
-          />
-        </ListItemButton>
-      </ListItem>
-    );
-  }
-
 function Auth(props) {
     const rootURL = 'https://api-bgb.herokuapp.com/'
     const [loading, setLoading] = useState(false)
