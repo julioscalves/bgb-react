@@ -224,7 +224,7 @@ function ItemList(props) {
     useEffect(() => {
         const priceValidator = new RegExp('([a-z]|[0-9][\.|,][0-9]{3,})', 'gi')
         
-        if (props.isStandard) {
+        if (props.isStandard && (editType === "Apenas Venda" || editType === "Venda ou Troca")) {
             const isPriceOk = !editPrice.match(priceValidator) && editPrice !== ''
 
             setIsEditSubmitEnabled(!isPriceOk)
@@ -235,7 +235,7 @@ function ItemList(props) {
             setIsEditSubmitEnabled(!isStartingPriceOk && !isIncrementOk)
         }
 
-    }, [props.isStandard, editPrice, editStartingPrice, editIncrement])
+    }, [props.isStandard, editPrice, editStartingPrice, editIncrement, editType])
    
     return (
         <>
