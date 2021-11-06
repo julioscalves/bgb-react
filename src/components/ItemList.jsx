@@ -50,7 +50,7 @@ function ItemList(props) {
     const [editStartingPrice, setEditStartingPrice] = useState('')
     const [editIncrement, setEditIncrement] = useState('')
 
-    const [isEditSubmitEnabled, setIsEditSubmitEnabled] = useState(true)
+    const [isEditSubmitDisabled, setIsEditSubmitDisabled] = useState(false)
 
     const openDeleteDialog = (id, isStandard) => {
         let targetFilter
@@ -223,16 +223,28 @@ function ItemList(props) {
 
     useEffect(() => {
         const priceValidator = new RegExp('([a-z]|[0-9][\.|,][0-9]{3,})', 'gi')
+
+        console.log(isEditSubmitDisabled)
         
         if (props.isStandard && (editType === "Apenas Venda" || editType === "Venda ou Troca")) {
             const isPriceOk = !editPrice.match(priceValidator) && editPrice !== ''
 
-            setIsEditSubmitEnabled(!isPriceOk)
-        } else {
+            if (isPriceOk) {
+                setIsEditSubmitDisabled(false)
+            } else {
+                setIsEditSubmitDisabled(true)
+            }
+            
+        } else if (!props.isStandard) {
             const isStartingPriceOk = !editPrice.match(editStartingPrice) && editStartingPrice !== ''
             const isIncrementOk = !editPrice.match(editIncrement)
 
-            setIsEditSubmitEnabled(!isStartingPriceOk && !isIncrementOk)
+            if (isStartingPriceOk && isIncrementOk) {
+                setIsEditSubmitDisabled(false)
+            } else {
+                setIsEditSubmitDisabled(true)
+            }
+
         }
 
     }, [props.isStandard, editPrice, editStartingPrice, editIncrement, editType])
@@ -464,7 +476,7 @@ function ItemList(props) {
                     </DialogContent>
                 <DialogActions>
                     <Button onClick={ closeEditDialog }>Cancelar</Button>
-                    <Button onClick={ onEditItem } disabled={ isEditSubmitEnabled } autoFocus>
+                    <Button onClick={ onEditItem } disabled={ isEditSubmitDisabled } autoFocus>
                         Confirmar
                     </Button>
                 </DialogActions>

@@ -168,7 +168,7 @@ function ItemForm(props) {
                 id          : generateUniqueItemId(props.boardgames),
                 name        : boardgame,
                 description : description,
-                price       : formatPrice(price),
+                price       : isNaN(formatPrice(price)) ? formatPrice("100.00") : formatPrice(price),
                 type        : typeSelect,
             }
 
