@@ -129,7 +129,7 @@ function UserForm(props) {
                 </Grid>
                 <Grid item xs={3}>
                     <FormControl variant="standard" fullWidth>
-                        <InputLabel id="state-select-label">Estado</InputLabel>
+                        <InputLabel id="state-select-label">Estado *</InputLabel>
                         <Select 
                             labelId="state-select-label" 
                             id="state-select" 
