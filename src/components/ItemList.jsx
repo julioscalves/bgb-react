@@ -223,8 +223,6 @@ function ItemList(props) {
 
     useEffect(() => {
         const priceValidator = new RegExp('([a-z]|[0-9][\.|,][0-9]{3,})', 'gi')
-
-        console.log(isEditSubmitDisabled)
         
         if (props.isStandard && (editType === "Apenas Venda" || editType === "Venda ou Troca")) {
             const isPriceOk = !editPrice.match(priceValidator) && editPrice !== ''

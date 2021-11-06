@@ -164,11 +164,13 @@ function ItemForm(props) {
         const doesBoardgameExists = boardgameOptions.indexOf(boardgame) >= 0
 
         if (props.isStandard && doesBoardgameExists) {
+            const formattedPrice = price === "" ? formatPrice("100.00") : formatPrice(price)
+
             const newItem = {
                 id          : generateUniqueItemId(props.boardgames),
                 name        : boardgame,
                 description : description,
-                price       : isNaN(formatPrice(price)) ? formatPrice("100.00") : formatPrice(price),
+                price       : formattedPrice,
                 type        : typeSelect,
             }
 
