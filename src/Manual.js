@@ -59,7 +59,7 @@ function Manual() {
 
                         <Alert variant="outlined" severity="info">
                             Certifique-se que seu anúncio está correto antes do envio. Você não poderá editá-lo e só estará liberado para 
-                            enviar outro após 7 dias.
+                            enviar outro após 5 dias.
                         </Alert>
 
                         <Alert variant="outlined" severity="info" sx={{ mt: 2 }}>

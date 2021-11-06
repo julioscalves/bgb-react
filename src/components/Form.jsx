@@ -265,7 +265,7 @@ function Form(props) {
                 </DialogTitle>
                     <DialogContent>
                         <DialogContentText id="alert-dialog-description">
-                            Ao confirmar o envio, sua conta ficará impedida de enviar novas mensagens por 7 dias,
+                            Ao confirmar o envio, sua conta ficará impedida de enviar novas mensagens por 5 dias,
                             além de não ser possível editar o anúncio uma vez enviado. 
                         </DialogContentText>
                         <DialogContentText>
