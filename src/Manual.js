@@ -168,7 +168,7 @@ function Manual() {
                         <Alert variant="outlined" severity="info">
                             Para habilitar as notificações via o bot do Bazar BGB, certifique-se de habilitar essa permissão durante o login.
                         </Alert>
-                        <Alert variant="outlined" severity="info">
+                        <Alert variant="outlined" severity="info" sx={{ mt: 2 }}>
                             Caso não queira receber notificação, basta recusar essa permissão durante o login ou bloquear o bot do BGB diretamente
                             no Telegram.
                         </Alert>
@@ -295,7 +295,7 @@ function Manual() {
                             Se os problemas persistirem, tente realizar o login utilizando outro aparelho, desktop ou notebook.
                         </Typography>
                         <Alert variant="outlined" severity="info">
-                            O erro "bot domain invalid!" tem sido observado em usuários do Firefox. Portanto, utilize outro navegador se ver esse problema.
+                            O erro "bot domain invalid!" tem sido observado em usuários do Firefox. Portanto, tente utilizar outro navegador.
                         </Alert>
                     </AccordionDetails>
                 </Accordion>
