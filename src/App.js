@@ -1,18 +1,21 @@
 import './Home.css';
 
-import React from "react"
+import React, { lazy, Suspense } from "react"
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 import {  
     Card,
     CardContent,
+    CircularProgress,
     Container,
     Grid,
 } from "@mui/material"
 
-import Header from './components/Header'
-import Home from './Home'
-import Manual from './Manual'
+const Header = lazy(() => import('./components/Header'))
+const Home = lazy(() => import('./Home'))
+const Manual = lazy(() => import('./Manual'))
+
+const loading = () => <CircularProgress color="success" />
 
 function App() {
     return (
@@ -20,7 +23,9 @@ function App() {
             <Card sx={{ minWidth: 275, marginBottom: "48px" }} variant="outlined">
                 <CardContent> 
                     <div className="Manual">
-                        <Header />
+                        <Suspense fallback={ loading() }>
+                            <Header />
+                        </Suspense>
                             <Grid
                                 container
                                 direction="row"
@@ -31,10 +36,14 @@ function App() {
                                 <BrowserRouter>
                                     <Switch>
                                         <Route path="/manual">
-                                            <Manual />
+                                            <Suspense fallback={ loading() }>
+                                                <Manual />
+                                            </Suspense>
                                         </Route>
                                         <Route path="/">
-                                            <Home />
+                                            <Suspense fallback={ loading() }>
+                                                <Home />
+                                            </Suspense>
                                         </Route>                
                                     </Switch>
                                 </BrowserRouter>       

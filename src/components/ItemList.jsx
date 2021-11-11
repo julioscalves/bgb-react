@@ -298,7 +298,7 @@ function ItemList(props) {
                             <ListSubheader>    
                                 {
                                     props.isStandard
-                                        ?   "Anúncios "
+                                        ?   "Anúncio "
                                         :   "Leilão "
                                 }                        
                                 de @{ props.username }
