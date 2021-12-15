@@ -23,7 +23,6 @@ function Header() {
             </Typography>
             
             <div className="alerts">
-                <Alert variant="filled" severity="error" style={{ marginTop: 8 + "px" }}><strong>Atenção!</strong> Esta ferramenta está em desenvolvimento.</Alert>
                 <Alert id="header-alert-info" variant="filled" severity="info" style={{ marginTop: 8 + "px" }}><strong>Dúvidas?</strong> Consulte nosso <a href="/manual" target="_blank"><strong>Manual!</strong></a></Alert>
             </div>            
         </Grid>
