@@ -48,7 +48,7 @@ function Auth(props) {
             <>
                 <TelegramLoginButton 
                     dataOnauth={ handleTelegramResponse }
-                    botName="bgbtests_bot" 
+                    botName="bgbbazar_bot" 
                 />
 
                 { 
