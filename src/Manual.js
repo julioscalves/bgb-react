@@ -31,11 +31,11 @@ function Manual() {
             </Grid>
 
             <Grid container spacing={2} sx={{ width: "85%", mt: 1, mb: 5 }}>
-                <Accordion>
+                <Accordion id="ad">
                     <AccordionSummary
                         expandIcon={<ExpandMore />}
-                        aria-controls="panel1a-content"
-                        id="panel1a-header"
+                        aria-controls="diff-content"
+                        id="diff-header"
                     >
                         <Typography variant="h6" component="div" gutterBottom>
                             Como gero um anúncio?
@@ -71,11 +71,12 @@ function Manual() {
 
                 <Accordion
                     sx={{ mt: 2 }}
+                    id="diff"
                 >
                     <AccordionSummary
                         expandIcon={<ExpandMore />}
-                        aria-controls="panel1a-content"
-                        id="panel1a-header"
+                        aria-controls="diff-content"
+                        id="diff-header"
                     >
                         <Typography variant="h6" component="div" gutterBottom>
                             Qual a diferença entre as opções "anúncio" e "leilão"?
@@ -111,11 +112,12 @@ function Manual() {
 
                 <Accordion
                     sx={{ mt: 2 }}
+                    id="changes"
                 >
                     <AccordionSummary
                         expandIcon={<ExpandMore />}
-                        aria-controls="panel1a-content"
-                        id="panel1a-header"
+                        aria-controls="changes-content"
+                        id="changes-header"
                     >
                         <Typography variant="h6" component="div" gutterBottom>
                             Quais as mudanças desta versão em relação à anterior?
@@ -149,11 +151,12 @@ function Manual() {
 
                 <Accordion
                     sx={{ mt: 2 }}
+                    id="notifications"
                 >
                     <AccordionSummary
                         expandIcon={<ExpandMore />}
-                        aria-controls="panel1a-content"
-                        id="panel1a-header"
+                        aria-controls="notifications-content"
+                        id="notifications-header"
                     >
                         <Typography variant="h6" component="div" gutterBottom>
                             É possível receber notificações quando comentam no meu anúncio?
@@ -177,11 +180,12 @@ function Manual() {
 
                 <Accordion
                     sx={{ mt: 2 }}
+                    id="missing"
                 >
                     <AccordionSummary
                         expandIcon={<ExpandMore />}
-                        aria-controls="panel1a-content"
-                        id="panel1a-header"
+                        aria-controls="missing-content"
+                        id="missing-header"
                     >
                         <Typography variant="h6" component="div" gutterBottom>
                             Minha cidade ou meu jogo não aparece na lista de sugestões!
@@ -202,11 +206,12 @@ function Manual() {
 
                 <Accordion
                     sx={{ mt: 2 }}
+                    id="images"
                 >
                     <AccordionSummary
                         expandIcon={<ExpandMore />}
-                        aria-controls="panel1a-content"
-                        id="panel1a-header"
+                        aria-controls="images-content"
+                        id="images-header"
                     >
                         <Typography variant="h6" component="div" gutterBottom>
                             Como adiciono imagens ao meu anúncio?
@@ -221,11 +226,12 @@ function Manual() {
 
                 <Accordion
                     sx={{ mt: 2 }}
+                    id="import"
                 >
                     <AccordionSummary
                         expandIcon={<ExpandMore />}
-                        aria-controls="panel1a-content"
-                        id="panel1a-header"
+                        aria-controls="import-content"
+                        id="import-header"
                     >
                         <Typography variant="h6" component="div" gutterBottom>
                             Como posso importar os itens de outro anúncio?
@@ -251,11 +257,12 @@ function Manual() {
 
                 <Accordion
                     sx={{ mt: 2 }}
+                    id="limit"
                 >
                     <AccordionSummary
                         expandIcon={<ExpandMore />}
-                        aria-controls="panel1a-content"
-                        id="panel1a-header"
+                        aria-controls="limit-content"
+                        id="limit-header"
                     >
                         <Typography variant="h6" component="div" gutterBottom>
                             Qual o limite de itens por anúncio?
@@ -272,11 +279,12 @@ function Manual() {
 
                 <Accordion
                     sx={{ mt: 2 }}
+                    id="login-problems"
                 >
                     <AccordionSummary
                         expandIcon={<ExpandMore />}
-                        aria-controls="panel1a-content"
-                        id="panel1a-header"
+                        aria-controls="login-problems-content"
+                        id="login-problems-header"
                     >
                         <Typography variant="h6" component="div" gutterBottom>
                             Estou com problemas para realizar o login pelo Telegram!
@@ -302,11 +310,12 @@ function Manual() {
 
                 <Accordion
                     sx={{ mt: 2 }}
+                    id="privacy"
                 >
                     <AccordionSummary
                         expandIcon={<ExpandMore />}
-                        aria-controls="panel1a-content"
-                        id="panel1a-header"
+                        aria-controls="privacy-content"
+                        id="privacy-header"
                     >
                         <Typography variant="h6" component="div" gutterBottom>
                             Quais informações do login são utilizadas por este site?
@@ -323,11 +332,12 @@ function Manual() {
 
                 <Accordion
                     sx={{ mt: 2 }}
+                    id="feedback"
                 >
                     <AccordionSummary
                         expandIcon={<ExpandMore />}
-                        aria-controls="panel1a-content"
-                        id="panel1a-header"
+                        aria-controls="feedback-content"
+                        id="feedback-header"
                     >
                         <Typography variant="h6" component="div" gutterBottom>
                             Eu tenho uma sugestão, reclamação ou dúvida não respondida nesta página!
