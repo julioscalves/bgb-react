@@ -13,7 +13,7 @@ import TelegramLoginButton from 'react-telegram-login'
 import AuthAlert from "./AuthAlert"
 
 function Auth(props) {
-    const rootURL = 'https://api-bgb.herokuapp.com/'
+    const rootURL = 'https://bazarbgb.pythonanywhere.com/'
     const [loading, setLoading] = useState(false)
 
     const handleTelegramResponse = response => {

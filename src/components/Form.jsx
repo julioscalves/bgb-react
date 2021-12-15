@@ -25,7 +25,7 @@ import ItemForm from "./ItemForm"
 import ItemList from "./ItemList"
 
 function Form(props) {
-    const rootURL = 'https://api-bgb.herokuapp.com/'
+    const rootURL = 'https://bazarbgb.pythonanywhere.com/'
 
     const [boardgames, setBoardgames] = useState([])
     const [auctions, setAuctions] = useState([])
