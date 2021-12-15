@@ -289,7 +289,8 @@ function ItemList(props) {
 
             <Box
                 sx={{
-                    width: "85%"
+                    width: "85%",
+                    wordWrap: "break-word",
                 }}
             >
                 <List
