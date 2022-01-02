@@ -187,7 +187,7 @@ function ItemForm(props) {
                 name            : boardgame,
                 description     : description,
                 starting_price  : formatPrice(startingPrice),
-                increment       : increment === '' ? formatPrice(5) : formatPrice(increment),
+                increment       : increment === '' ? formatPrice("5.00") : formatPrice(increment),
             }
 
             props.onAddItem(newItem)
