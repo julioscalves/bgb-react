@@ -31,10 +31,16 @@ function UserForm(props) {
     const [city, setCity] = useState('')
     const [cityList, setCityList] = useState([])
 
-    const filterOptions = createFilterOptions({
-        limit: 25,
-        matchFrom: 'start'
+    const _filterOptions = createFilterOptions({
+        limit: 100,
+        matchFrom: 'any'
     })
+
+    const filterOptions = (options, state) => {
+        const results = _filterOptions(options, state)
+        
+        return results.sort((a, b) => a.length - b.length)
+    }
 
     const onCityChange = (event, value) => {
         if (value != null) {
@@ -68,6 +74,7 @@ function UserForm(props) {
 
     useEffect(() => {
         const cityFilter = cityList.filter(name => name === city)
+        console.log(cityList)
 
         if (cityFilter.length > 0) {
             props.onChangeUserData({ city: city })
