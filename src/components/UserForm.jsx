@@ -33,7 +33,7 @@ function UserForm(props) {
 
     const _filterOptions = createFilterOptions({
         limit: 100,
-        matchFrom: 'any'
+        matchFrom: 'start'
     })
 
     const filterOptions = (options, state) => {
