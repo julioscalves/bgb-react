@@ -123,7 +123,7 @@ function Form(props) {
     useEffect(() => {
         const isCityFilled = userData.city !== ""
         const isStateFilled = userData.state !== ""
-        const charsLimit = countChars <= 4000
+        const charsLimit = countChars <= 3800
         let haveGames = false
 
         if (isStandard) {
@@ -240,7 +240,7 @@ function Form(props) {
             <Divider style={{ width: "85%", mb: 3 }} />
 
             <Typography variant="body1" sx={{ mt: 2, mb: 2, ml: 2, fontSize: "14px", color: "rgba(255, 255, 255, 0.7)" }} component="div">
-                { countChars }/4000 caracteres
+                { countChars }/3800 caracteres
             </Typography>
             
             <Button 
