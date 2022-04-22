@@ -267,7 +267,7 @@ function Manual() {
                             Existe uma limitação técnica no Telegram
                             que impede o envio de uma mensagem com mais de 4.096 caracteres. Por isso, não é possível delimitar a 
                             quantidade máxima pois isso depende do total de caracteres presentes no anúncio como um todo. O Bazar 
-                            se reserva a utilização de 96 caracteres para formatação do anúncio, fixando o limite em 4.000 caracteres.
+                            se reserva a utilização de 296 caracteres para formatação do anúncio, fixando o limite em 3.800 caracteres.
                         </Typography>
                     </AccordionDetails>
                 </Accordion>
