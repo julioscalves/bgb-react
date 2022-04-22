@@ -68,7 +68,7 @@ function ItemList(props) {
         setTarget(id)
     }
 
-    const formatPrice = value => parseFloat(value.replace(',', '.'))
+    const formatPrice = value => parseFloat(value.replace('.', '').replace(',', '.'))
                                                     .toLocaleString('pt-br', {
                                                         maximumFractionDigits: 2, 
                                                         minimumFractionDigits: 2
@@ -223,10 +223,14 @@ function ItemList(props) {
     }
 
     useEffect(() => {
-        const priceValidator = new RegExp('([a-z]|[0-9][\.|,][0-9]{3,})', 'gi')
+        const priceValidator = new RegExp('([a-z]|[0-9]{1,}([\\.]|[,][0-9]{3,})[,][0-9]{2})', 'gi')
+        const editPriceCheck = editPrice.toLocaleString('pt-br', {
+                maximumFractionDigits: 2, 
+                minimumFractionDigits: 2
+            })
         
         if (props.isStandard && (editType === "Apenas Venda" || editType === "Venda ou Troca")) {
-            const isPriceOk = !editPrice.match(priceValidator) && editPrice !== ''
+            const isPriceOk = !editPriceCheck.match(priceValidator) && editPrice !== ''
 
             if (isPriceOk) {
                 setIsEditSubmitDisabled(false)
@@ -235,8 +239,8 @@ function ItemList(props) {
             }
             
         } else if (!props.isStandard) {
-            const isStartingPriceOk = !editPrice.match(editStartingPrice) && editStartingPrice !== ''
-            const isIncrementOk = !editPrice.match(editIncrement)
+            const isStartingPriceOk = !editPriceCheck.match(editStartingPrice) && editStartingPrice !== ''
+            const isIncrementOk = !editPriceCheck.match(editIncrement)
 
             if (isStartingPriceOk && isIncrementOk) {
                 setIsEditSubmitDisabled(false)

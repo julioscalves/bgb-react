@@ -74,7 +74,6 @@ function UserForm(props) {
 
     useEffect(() => {
         const cityFilter = cityList.filter(name => name === city)
-        console.log(cityList)
 
         if (cityFilter.length > 0) {
             props.onChangeUserData({ city: city })

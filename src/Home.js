@@ -13,7 +13,7 @@ import Auth from './components/Auth'
 import Form from './components/Form'
 
 function Home() {
-    const [auth, setAuth] = useState({  })
+    const [auth, setAuth] = useState({ })
 
     return (
         <>

@@ -72,8 +72,6 @@ function Form(props) {
         setSubmitStatus({ loading: true, message: '' })
         event.preventDefault()
 
-        console.log(submitStatus)
-
         const payload = {
             ...props.auth,
             ...userData
@@ -115,7 +113,6 @@ function Form(props) {
                 } else {
                     setSubmitStatus({ loading: false, message: json.status })
                 }
-                console.log(submitStatus)
             })
             
     }

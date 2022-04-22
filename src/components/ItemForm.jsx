@@ -204,7 +204,7 @@ function ItemForm(props) {
 
     useEffect(() => {
         const isBoardgameFilled = boardgame !== ''
-        const priceValidator = new RegExp('([a-z]|[0-9]{1,}([.]|[,][0-9]{3,})[,][0-9]{2})', 'gi')
+        const priceValidator = new RegExp('([a-z]|[0-9]{1,}([\\.]|[,][0-9]{3,})[,][0-9]{2})', 'gi')
 
         if (props.isStandard) {
             const doesTypeRequiresPrice = (typeSelect === 'Apenas Venda')||(typeSelect === 'Venda ou Troca')

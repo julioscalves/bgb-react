@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import AdapterDateFns from '@mui/lab/AdapterDateFns';
 import DateTimePicker from '@mui/lab/DateTimePicker';
@@ -23,6 +23,7 @@ const auctionMaxDate = () => {
 
 function SelectDate(props) {
     const [endingDate, setEndingDate] = useState('')
+    const [firstDate, setFirstDate] = useState('')
 
     const handleEndingDateChange = (event) => {
         const date = moment(new Date(event))
@@ -61,4 +62,3 @@ function SelectDate(props) {
 }
 
 export default SelectDate
-
