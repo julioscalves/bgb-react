@@ -9,6 +9,7 @@ import Form from "./components/Form";
 
 function Home() {
   const [auth, setAuth] = useState({});
+  const rootURL = "https://bazar.fly.dev/";
 
   return (
     <>
@@ -18,8 +19,8 @@ function Home() {
         justifyContent="center"
         alignItems="center"
       >
-        <Auth auth={auth} setAuth={setAuth} />
-
+        <Auth auth={auth} setAuth={setAuth} rootURL={rootURL} />
+        
         {auth.sent && (
           <Alert severity="success" sx={{ mt: 2 }}>
             <AlertTitle>Tudo certo!</AlertTitle>
@@ -27,12 +28,13 @@ function Home() {
             contato com a administração.
           </Alert>
         )}
+        
       </Grid>
 
       <Divider sx={{ mt: 4, mb: 1, width: "85%", mx: "auto" }} />
 
       {auth.status === "success" ? (
-        <Form auth={auth} setAuth={setAuth} />
+        <Form auth={auth} setAuth={setAuth} rootURL={rootURL} />
       ) : (
         <></>
       )}
