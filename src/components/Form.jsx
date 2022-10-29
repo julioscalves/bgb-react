@@ -23,7 +23,6 @@ import ItemForm from "./ItemForm";
 import ItemList from "./ItemList";
 
 function Form(props) {
-  const rootUrl = "https://bazar.fly.dev/";
   const [boardgames, setBoardgames] = useState([]);
   const [auctions, setAuctions] = useState([]);
   const [isStandard, setIsStandard] = useState(true);
@@ -82,7 +81,7 @@ function Form(props) {
       payload.type = "auction";
     }
 
-    const url = rootURL + "submit";
+    const url = props.rootURL + "submit";
 
     fetch(url, {
       method: "POST",
