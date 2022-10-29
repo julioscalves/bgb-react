@@ -6,13 +6,14 @@ import TelegramLoginButton from "react-telegram-login";
 import AuthAlert from "./AuthAlert";
 
 function Auth(props) {
+  const rootUrl = "https://bazar.fly.dev/";
   const [loading, setLoading] = useState(false);
 
   const handleTelegramResponse = (response) => {
     setLoading(true);
 
     const authObject = response;
-    const authUrl = props.rootURL + "auth";
+    const authUrl = rootURL + "auth";
 
     fetch(authUrl, {
       method: "POST",
