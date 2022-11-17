@@ -119,7 +119,7 @@ function Form(props) {
     if (isStandard) {
       haveGames = userData.boardgames.length > 0;
     } else {
-      haveGames = userData.auctions.length > 0;
+      haveGames = userData.auctions.length > 0 && userData.ending_date !== "";
     }
 
     setIsSubmitDisabled(
@@ -134,6 +134,7 @@ function Form(props) {
     userData.state,
     userData.boardgames,
     userData.auctions,
+    userData.ending_date,
     isStandard,
     countChars,
   ]);

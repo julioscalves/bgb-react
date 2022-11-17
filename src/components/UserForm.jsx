@@ -190,11 +190,10 @@ function UserForm(props) {
           </FormControl>
         </Grid>
 
-        {!props.isStandard ? (
+        {!props.isStandard && (
           <SelectDate onChangeUserData={props.onChangeUserData} />
-        ) : (
-          <></>
         )}
+
         <Grid item xs={12}>
           <FormControl variant="standard" fullWidth>
             <TextField
