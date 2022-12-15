@@ -9,7 +9,7 @@ import Form from "./components/Form";
 
 function Home() {
   const [auth, setAuth] = useState({});
-  const rootURL = "http://bazarbgb.pythonanywhere.com/";
+  const rootURL = "https://bazarbgb.pythonanywhere.com/";
 
   return (
     <>
