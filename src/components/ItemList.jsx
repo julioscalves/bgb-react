@@ -23,7 +23,7 @@ import Item from "./Item";
 
 function ItemList(props) {
   const MAXCHARS = 140;
-  const rootURL = "https://bazar.fly.dev/";
+  const rootURL = "https://bazarbgb.pythonanywhere.com/";
 
   const inputProps = {
     inputMode: "numeric",
