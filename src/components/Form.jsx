@@ -196,7 +196,7 @@ function Form(props) {
         <ToggleButton value={true} aria-label="standard">
           Anúncio
         </ToggleButton>
-        <ToggleButton value={false} aria-label="auction">
+        <ToggleButton value={false} aria-label="auction" disabled={true}>
           Leilão
         </ToggleButton>
       </ToggleButtonGroup>
