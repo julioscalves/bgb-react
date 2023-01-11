@@ -193,7 +193,7 @@ function Form(props) {
         aria-label="ad type"
         sx={{ mt: 3, mb: 1 }}
       >
-        <ToggleButton value={true} aria-label="standard">
+        <ToggleButton value={true} aria-label="standard" disabled={true}>
           Anúncio
         </ToggleButton>
         <ToggleButton value={false} aria-label="auction" disabled={true}>
