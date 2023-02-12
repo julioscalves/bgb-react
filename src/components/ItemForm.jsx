@@ -42,7 +42,7 @@ const comparaJogosQuery = (name) => {
             name: {
                 _ilike : "${name}"
             }
-            type: { _neq: "RPG" }
+            type: { _neq: rpg }
         }) { name }
     }`;
 };
