@@ -25,7 +25,7 @@ const itemTypeOptions = [
 ];
 
 const graphqlName = (name) => {
-  const specialChars = ["-", ":", ";", "\\.", ",", " "];
+  const specialChars = ["-", ":", ";", "\\.", ","];
   name = name.toLowerCase();
 
   for (let char in specialChars) {
