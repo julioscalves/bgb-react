@@ -33,7 +33,7 @@ const graphqlName = (name) => {
     name = name.replace(regex, "");
   }
 
-  return `${name}`;
+  return `$^{name}`;
 };
 
 const comparaJogosQuery = (name) => {
