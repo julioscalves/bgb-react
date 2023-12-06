@@ -25,12 +25,11 @@ const itemTypeOptions = [
 ];
 
 const graphqlName = (name) => {
-  const specialChars = [";", "\\.", ","];
+  const specialChars = [":", "-", ";", "\\.", ",", " "];
   name = name.toLowerCase();
 
-  for (let char in specialChars) {
-    let regex = new RegExp(`${specialChars[char]}`, "g");
-    name = name.replace(regex, "");
+  for (let char of specialChars) {
+    name = name.replace(char, `[${char}]?`);
   }
 
   return `^${name}`;
