@@ -30,17 +30,17 @@ const graphqlName = (name) => {
 
   for (let char in specialChars) {
     let regex = new RegExp(`${specialChars[char]}`, "g");
-    name = name.replace(regex, "%");
+    name = name.replace(regex, "");
   }
 
-  return `%${name}%`;
+  return `${name}`;
 };
 
 const comparaJogosQuery = (name) => {
   return `{
         product(where: {
             name: {
-                _ilike : "${name}"
+                _iregex : "${name}"
             }
             type: { _neq: rpg }
         }) { name }
