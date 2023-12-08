@@ -77,7 +77,7 @@ function Manual() {
             </Alert>
             <Alert variant="outlined" severity="warning" sx={{ mt: 2, mb: 2 }}>
               Escolha o tipo correto de anúncio! Anúncio de leilão não é venda,
-              é leilão externo ou interno. Anúncios cadastrados com o tipo
+              é leilão externo. Anúncios cadastrados com o tipo
               errado serão removidos.
             </Alert>
             <Alert variant="outlined" severity="info">
@@ -88,11 +88,12 @@ function Manual() {
             <Alert variant="outlined" severity="info" sx={{ mt: 2 }}>
               Diferentes anúncios exigem diferentes tipos de informação.
               Anúncios que envolvam venda exigem o preço antes de serem
-              cadastrados. O mesmo vale para leilões.
+              cadastrados.
             </Alert>
           </AccordionDetails>
         </Accordion>
 
+        {/*
         <Accordion sx={{ mt: 2 }} id="diff">
           <AccordionSummary
             expandIcon={<ExpandMore />}
@@ -142,6 +143,7 @@ function Manual() {
             </Alert>
           </AccordionDetails>
         </Accordion>
+        */}
 
         <Accordion sx={{ mt: 2 }} id="changes">
           <AccordionSummary
@@ -261,7 +263,7 @@ function Manual() {
               align="justify"
             >
               Certifique-se que o nome em questão foi digitado corretamente,
-              incluindo os acentos.
+              incluindo os acentos e símbolos como ":" e "-".
             </Typography>
             <Typography
               variant="subtitle1"
@@ -434,8 +436,8 @@ function Manual() {
               align="justify"
             >
               Apenas o seu nome e seu ID de usuário para finalidades de controle
-              de mensagens. Nenhuma informação privada, como número de telefone
-              ou conversas, é possível de ser acessada por meio do login pelo
+              de mensagens. Nenhuma informação privada, como número de telefone ou
+              conversas, é possível de ser acessada por meio do login pelo
               Telegram, seja por este site, seja por outros usuários.
             </Typography>
           </AccordionDetails>
