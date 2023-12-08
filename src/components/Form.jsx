@@ -152,7 +152,7 @@ function Form(props) {
     const isWhatsappPresent = whatsappRegex.test(userData.general_description);
 
     if (isWhatsappPresent) {
-      setDescriptionValidation("Menções ao Whatsapp não são permitidas!");
+      setDescriptionValidation("Menções ao Whatsapp não são permitidas.");
     } else if (externalAuction.length > 0 && isURLPresent === false) {
       setDescriptionValidation("Por favor, informe o link do leilão.");
     } else {
@@ -186,6 +186,7 @@ function Form(props) {
 
   return (
     <Grid container direction="row" justifyContent="center" alignItems="center">
+      {/*
       <ToggleButtonGroup
         value={isStandard}
         exclusive
@@ -200,6 +201,7 @@ function Form(props) {
           Leilão
         </ToggleButton>
       </ToggleButtonGroup>
+      */}
 
       <UserForm
         isStandard={isStandard}
