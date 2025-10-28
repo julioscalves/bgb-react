@@ -80,7 +80,7 @@ function UserForm(props) {
 
   useEffect(() => {
     let cities = [];
-    estadosCidades.estados.forEach((element) => cities.push(element.cidades));
+    citiesAndStates.estados.forEach((element) => cities.push(element.cidades));
     cities = [...new Set(cities.flat())];
     setCityList(cities);
   }, []);
