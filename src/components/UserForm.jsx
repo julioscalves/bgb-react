@@ -13,6 +13,7 @@ import {
   MenuItem,
   Select,
 } from "@mui/material";
+import citiesAndStates from "../estados-cidades.json";
 
 import SelectDate from "./SelectDate";
 
@@ -78,18 +79,10 @@ function UserForm(props) {
   };
 
   useEffect(() => {
-    const url =
-      "https://gist.githubusercontent.com/letanure/3012978/raw/2e43be5f86eef95b915c1c804ccc86dc9790a50a/estados-cidades.json";
-
-    fetch(url)
-      .then((response) => response.json())
-      .then((data) => {
-        let cities = [];
-        data.estados.forEach((element) => cities.push(element.cidades));
-        cities = [...new Set(cities.flat())];
-
-        setCityList(cities);
-      });
+    let cities = [];
+    estadosCidades.estados.forEach((element) => cities.push(element.cidades));
+    cities = [...new Set(cities.flat())];
+    setCityList(cities);
   }, []);
 
   useEffect(() => {
